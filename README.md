@@ -22,10 +22,11 @@ var c = new Carousel3D({
 });
 </pre>
 
+<br/>
 <hr/>
+<br/>
 
 <h3>Suggest Dev Snippets:</h3>
-<p></p>
 <pre>
 var dev = {};
 dev.degree = 0;
