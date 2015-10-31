@@ -22,6 +22,8 @@ var c = new Carousel3D({
 });
 </pre>
 
+<hr/>
+
 <h3>Suggest Dev Snippets</h3>
 
 <pre>
