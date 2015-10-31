@@ -1,2 +1,23 @@
 # Carousel 3D
 Responsive 3D carousel plugin.  Loaded with options! ES6 supported.  Strict mode supported. No dependencies.
+
+<p>NOTE: The API only provides one method called "turn". For a small footprint, it's up to the developer to use the turn method in association with any features he/she wants; such as: click navigating, slider navigation, keyboard navigating, swiping, spinning with an ease, etc.</p>
+
+<h2>Use:</h2>
+
+<pre>
+var c = new Carousel3D({
+  box: '.js-carousel1 div', // Required. Container for elements; as selector string
+  points: '.js-carousel1 li', // Required. Elements to move around; as selector string
+  pointsPercentOf: 0.25, // Optional. Percent of points width, relative to the box's width
+  perspective: 0.25, // Optional. Percent relative to the width; as a decimal
+  depth: 0.5, // Optional. Viewing depth percent; as a decimal
+  float: 'left', // Optional internationalization ordering. "Float" items to the 'left' or 'right'
+  animate: 250, // Optional. Animation duration in milleconds; as an int
+  fps: 60, // Optional. Frames Per Second; as an int
+  opacity: 0.125, // Optional. Opacity percent; as a decimal
+  //grayscale: 1, // Optional. Grayscale percent; as a decimal
+  //sepia: 1, // Optional. Sepia percent; as a decimal
+  blur: 10 // Optional. Blur in pixels; as a number
+});
+</pre>
