@@ -24,8 +24,8 @@ var c = new Carousel3D({
 
 <hr/>
 
-<h3>Suggest Dev Snippets</h3>
-
+<h3>Suggest Dev Snippets:</h3>
+<p></p>
 <pre>
 var dev = {};
 dev.degree = 0;
