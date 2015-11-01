@@ -3,6 +3,8 @@ Responsive 3D carousel plugin.  Loaded with options! ES6 supported.  Strict mode
 
 <p>NOTE: The API only provides one method called "turn". For a small footprint, it's up to the developer to use the turn method in association with any features he/she wants; such as: click navigating, slider navigation, keyboard navigating, swiping, spinning with an ease, etc.</p>
 
+<p><a href="http://codepen.io/clearwavedesigns/pen/QjxmxO" target="_blank">Live demo</a></p>
+
 <h2>Use:</h2>
 <p>Create as many instances as you need for each of your carousels</p>
 <pre>
