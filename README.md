@@ -1,19 +1,29 @@
 # Carousel 3D
 Responsive 3D carousel plugin.  Loaded with options! ES6 supported.  Strict mode supported. No dependencies.
 
-v1.1.0
+<small>
+Carousel3D v1.1.0
+(c) 2015 Clearwave Designs, LLC. http://clearwavedesigns.com
+License: Apache 2.0
+</small>
 
-<p>NOTE: The API only provides one method called "turn". For a small footprint, it's up to the developer to use the turn method in association with any features he/she wants; such as: click navigating, slider navigation, keyboard navigating, swiping, spinning with an ease, etc.</p>
+<h2>API</h2>
+<ul>
+  <li>turn(degreeToTurnTo) // Accepts one parameter, the degree to turn to as an Int or Float</li>
+  <li>reset() // Use after new items are injected (post instantiation) to reset the carousel</li>
+</ul>
 
-<p><a href="http://codepen.io/clearwavedesigns/pen/QjxmxO" target="_blank">Live demo</a></p>
+<p>NOTE: It's up to the developer to use the turn method in association with any features he/she wants; such as: click navigating, slider navigation, keyboard navigating, swiping, spinning with an ease, etc. This is done for a smaller footprint of the core engine.</p>
+
+<p><a href="http://codepen.io/clearwavedesigns/pen/QjxmxO" target="_blank"><strong>Live demo</strong></a></p>
 
 <h2>Use:</h2>
 <p>Create as many instances as you need for each of your carousels</p>
 <pre>
 var c = new Carousel3D({
-  box: '.js-carousel1 div', // Required. Container for elements; as selector string
-  points: '.js-carousel1 li', // Required. Elements to move around; as selector string
-  pointsPercentOf: 0.25, // Optional. Percent of points width, relative to the box's width
+  carousel: '.js-carousel1 div', // Required. Container for elements; as selector string
+  items: '.js-carousel1 li', // Required. Elements to move around; as selector string
+  itemsPercentOf: 0.25, // Optional. Percent of items width, relative to the carousel's width
   perspective: 0.25, // Optional. Percent relative to the width; as a decimal
   depth: 0.5, // Optional. Viewing depth percent; as a decimal
   float: 'left', // Optional internationalization ordering. "Float" items to the 'left' or 'right'
