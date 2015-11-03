@@ -7,10 +7,10 @@ Carousel3D v1.1.0
 License: Apache 2.0
 </small>
 
-<h2>API</h2>
+<h2>API:</h2>
 <ul>
-  <li>turn(degreeToTurnTo) // Accepts one parameter, the degree to turn to as an Int or Float</li>
-  <li>reset() // Use after new items are injected (post instantiation) to reset the carousel</li>
+  <li><strong>turn(degreeToTurnTo)</strong> // Accepts one parameter, the degree to turn to as an Int or Float</li>
+  <li><strong>reset()</strong> // Use after new items are injected (post instantiation) to reset the carousel</li>
 </ul>
 
 <p>NOTE: It's up to the developer to use the turn method in association with any features he/she wants; such as: click navigating, slider navigation, keyboard navigating, swiping, spinning with an ease, etc. This is done for a smaller footprint of the core engine.</p>
