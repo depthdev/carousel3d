@@ -15,9 +15,8 @@ License: Apache 2.0
 
 <p>NOTE: It's up to the developer to use the turn method in association with any features he/she wants; such as: click navigating, slider navigation, keyboard navigating, swiping, spinning with an ease, etc. This is done for a smaller footprint of the core engine.</p>
 
-<p><a href="http://codepen.io/clearwavedesigns/pen/QjxmxO" target="_blank"><strong>Live demo</strong></a></p>
-
 <h2>Use:</h2>
+<p><a href="http://codepen.io/clearwavedesigns/pen/QjxmxO" target="_blank"><strong>Live demo</strong></a></p>
 <p>Create as many instances as you need for each of your carousels</p>
 <pre>
 var c = new Carousel3D({
