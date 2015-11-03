@@ -9,7 +9,7 @@ License: Apache 2.0
 
 <h2>API:</h2>
 <ul>
-  <li><strong>turn(degreeToTurnTo)</strong> // Accepts one parameter, the degree to turn to as an Int or Float</li>
+  <li><strong>turn(</strong>degreeToTurnTo<strong>)</strong> // Accepts one parameter, the degree to turn to as an Int or Float</li>
   <li><strong>reset()</strong> // Use after new items are injected (post instantiation) to reset the carousel</li>
 </ul>
 
