@@ -1,5 +1,5 @@
 /*
- Carousel3D v1.0.0
+ Carousel3D v1.1.0
  (c) 2015 Clearwave Designs, LLC. http://clearwavedesigns.com
  License: Apache 2.0
 */
@@ -12,9 +12,11 @@ class Carousel3D {
     const $$=function(s){let nl=document.querySelectorAll(s),a=[];for(let i=0,l=nl.length;i<l;i++){a[i]=nl[i]}return a};
     
     // General
-    let box = $(o.box);
-    let points = $$(o.points);
-    let pointsPercentOf = o.pointsPercentOf || 0.25;
+    let carouselStr = o.carousel;
+    let carousel = $(carouselStr);
+    let itemsStr = o.items;
+    let items = $$(itemsStr);
+    let itemsPercentOf = o.pointsPercentOf || 0.25;
     let perspective = o.perspective || o.perspective === 0 ? o.perspective : 0.25;
     let depth = o.depth || o.depth === 0 ? 1 / o.depth : 2;
     let float = o.float || 'left';
@@ -26,8 +28,8 @@ class Carousel3D {
     let filterBlur = o.blur ? o.blur : 0;
     
     // Math Dependencies
-    let pointWidthAndHeight = '';
-    let pointMargin = '';
+    let itemWidthAndHeight = '';
+    let itemMargin = '';
 
     let widthRadius = 0;
     let heightRadius = 0;
@@ -35,7 +37,7 @@ class Carousel3D {
     let degrees = [];
     let degree = 0;
     
-    let len = points.length;
+    let len = items.length;
     let half = Math.ceil(len / 2);
     let incBy = 360 / len;
 
@@ -72,7 +74,6 @@ class Carousel3D {
         animating();
       } else {
         turn(extDegree);
-        console.log('here');
       }
     };
 
@@ -96,7 +97,7 @@ class Carousel3D {
           return Math.round(degreeMod360 > 180 ? (180 - (degreeMod360 - 180)) / incBy : degreeMod360 / incBy);
         }());
         
-        let p = 'position:absolute;z-index:' + z + ';left:' + x + 'px;top:' + y + 'px;' + pointMargin + pointWidthAndHeight +
+        let p = 'position:absolute;z-index:' + z + ';left:' + x + 'px;top:' + y + 'px;' + itemMargin + itemWidthAndHeight +
             '-webkit-transform:scale(' + s + ',' + s + ');' +
             '-moz-transform:scale(' + s + ',' + s + ');' +
             '-ms-transform:scale(' + s + ',' + s + ');' +
@@ -114,37 +115,47 @@ class Carousel3D {
             '-o-filter:' + fGrayscale + ' ' + fSepia + ' ' + fBlur + ';' +
             'filter:' + fGrayscale + ' ' + fSepia + ' ' + fBlur + ';';
         
-        points[i].style.cssText = p + f;
+        items[i].style.cssText = p + f;
       }  
     }; // turn
 
     // Reset
     let reset = function() {
-      // Box size
-      let boxWidth = box.offsetWidth;
-      let boxHeight = boxWidth * perspective;
-      box.style.height = boxHeight + 'px';
-      // Points size
-      let aspectPointWidth = points[0].offsetWidth;
-      let aspectPointHeight = points[0].offsetHeight;
-      let pointAspectRatio = aspectPointHeight / aspectPointWidth;
-      let pointWidthNum = boxWidth * pointsPercentOf;
-      pointWidthAndHeight = 'width:' + pointWidthNum + 'px;height:auto;';
-      pointMargin = 'margin:-' + ((pointWidthNum * pointAspectRatio) / 2) + 'px auto auto -' + (pointWidthNum / 2) + 'px;';
+      // Carousel size
+      let carouselWidth = carousel.offsetWidth;
+      let carouselHeight = carouselWidth * perspective;
+      carousel.style.height = carouselHeight + 'px';
+      // Items size
+      let aspectPointWidth = items[0].offsetWidth;
+      let aspectPointHeight = items[0].offsetHeight;
+      let itemAspectRatio = aspectPointHeight / aspectPointWidth;
+      let itemWidthNum = carouselWidth * itemsPercentOf;
+      itemWidthAndHeight = 'width:' + itemWidthNum + 'px;height:auto;';
+      itemMargin = 'margin:-' + ((itemWidthNum * itemAspectRatio) / 2) + 'px auto auto -' + (itemWidthNum / 2) + 'px;';
       // Math
-      widthRadius = boxWidth / 2;
-      heightRadius = boxHeight / 2;
+      widthRadius = carouselWidth / 2;
+      heightRadius = carouselHeight / 2;
       degrees = [float === 'left' ? 360 : 0]; // Reset degrees and first elem
       for (let i=1;i<len;i++) {
         degrees.push(float === 'left' ? 360 - Math.floor(i * incBy) : Math.floor(i * incBy));
       }
-      // Position the points
+      // Position the items
       turn(0);
+    };
+    
+    // Hard reset
+    let hardReset = function() {
+      carousel = $(carouselStr);
+      items = $$(itemsStr);
+      len = items.length;
+      half = Math.ceil(len / 2);
+      incBy = 360 / len;
+      reset();
     };
 
     // Init
     (function() {
-      box.style.position = 'relative';
+      carousel.style.position = 'relative';
       reset.bind(this)();
       window.addEventListener('load', reset.bind(this));
       window.addEventListener('resize',reset.bind(this));
@@ -152,7 +163,8 @@ class Carousel3D {
 
     // Dev API
     return {
-      turn: run
+      turn: run,
+      reset: hardReset
     }
   
   } // constructor
