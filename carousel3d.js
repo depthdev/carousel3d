@@ -1,5 +1,5 @@
 /*
- Carousel3D v1.1.0
+ Carousel3D v1.1.1
  (c) 2015 Clearwave Designs, LLC. http://clearwavedesigns.com
  License: Apache 2.0
 */
@@ -15,7 +15,7 @@ function Carousel3D(o) {
     var carousel = $(carouselStr);
     var itemsStr = o.items;
     var items = $$(itemsStr);
-    var itemsPercentOf = o.pointsPercentOf || 0.25;
+    var itemsPercentOf = o.itemsPercentOf || 0.25;
     var perspective = o.perspective || o.perspective === 0 ? o.perspective : 0.25;
     var depth = o.depth || o.depth === 0 ? 1 / o.depth : 2;
     var float = o.float || 'left';
