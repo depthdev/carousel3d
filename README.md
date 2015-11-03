@@ -20,18 +20,18 @@ License: Apache 2.0
 <p>Create as many instances as you need for each of your carousels</p>
 <pre>
 var c = new Carousel3D({
-  <strong>carousel</strong>: '.js-carousel1 div', // Required. Container for elements; as selector string
-  items: '.js-carousel1 li', // Required. Elements to move around; as selector string
-  itemsPercentOf: 0.25, // Optional. Percent of items width, relative to the carousel's width
-  perspective: 0.25, // Optional. Percent relative to the width; as a decimal
-  depth: 0.5, // Optional. Viewing depth percent; as a decimal
-  float: 'left', // Optional internationalization ordering. "Float" items to the 'left' or 'right'
-  animate: 250, // Optional. Animation duration in milleconds; as an int
-  fps: 60, // Optional. Frames Per Second; as an int
-  opacity: 0.125, // Optional. Opacity percent; as a decimal
-  //grayscale: 1, // Optional. Grayscale percent; as a decimal
-  //sepia: 1, // Optional. Sepia percent; as a decimal
-  blur: 10 // Optional. Blur in pixels; as a number
+  <strong>carousel:</strong> '.js-carousel1 div', // Required. Container for elements; as selector string
+  <strong>items:</strong> '.js-carousel1 li', // Required. Elements to move around; as selector string
+  <strong>itemsPercentOf:</strong> 0.25, // Optional. Percent of items width, relative to the carousel's width
+  <strong>perspective:</strong> 0.25, // Optional. Percent relative to the width; as a decimal
+  <strong>depth:</strong> 0.5, // Optional. Viewing depth percent; as a decimal
+  <strong>float:</strong> 'left', // Optional internationalization ordering. "Float" items to the 'left' or 'right'
+  <strong>animate:</strong> 250, // Optional. Animation duration in milleconds; as an int
+  <strong>fps:</strong> 60, // Optional. Frames Per Second; as an int
+  <strong>opacity:</strong> 0.125, // Optional. Opacity percent; as a decimal
+  <strong>grayscale:</strong> 1, // Optional. Grayscale percent; as a decimal
+  <strong>sepia:</strong> 1, // Optional. Sepia percent; as a decimal
+  <strong>blur:</strong> 10 // Optional. Blur in pixels; as a number
 });
 </pre>
 
