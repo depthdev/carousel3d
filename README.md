@@ -20,7 +20,7 @@ License: Apache 2.0
 <p>Create as many instances as you need for each of your carousels</p>
 <pre>
 var c = new Carousel3D({
-  carousel: '.js-carousel1 div', // Required. Container for elements; as selector string
+  <strong>carousel</strong>: '.js-carousel1 div', // Required. Container for elements; as selector string
   items: '.js-carousel1 li', // Required. Elements to move around; as selector string
   itemsPercentOf: 0.25, // Optional. Percent of items width, relative to the carousel's width
   perspective: 0.25, // Optional. Percent relative to the width; as a decimal
