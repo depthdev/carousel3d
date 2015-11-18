@@ -1,6 +1,6 @@
 /*
  Carousel3D v1.1.1
- (c) 2015 Clearwave Designs, LLC. http://clearwavedesigns.com
+ (c) 2015 Depth Development. http://depthdev.com
  License: Apache 2.0
 */
 
