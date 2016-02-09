@@ -1,13 +1,7 @@
 # Carousel 3D
 Responsive 3D carousel plugin.  Loaded with options! ES6 supported.  Strict mode supported. No dependencies. 2.32KB Minified.
 
-<small>
-Carousel3D v1.1.1
-<br/>
-(c) 2015 Depth Development. http://depthdev.com
-<br/>
-License: Apache 2.0
-</small>
+<p>Carousel3D v1.1.1</p>
 
 <h2>API:</h2>
 <ul>
